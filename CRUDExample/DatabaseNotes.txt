@@ -1,0 +1,14 @@
+When creating a database with EF Core
+- Run "Add-Migration" in the package manager console
+to create code first migrations when the database needs to 
+be updated
+- Run "Update-Database" to apply migrations to target database
+
+
+
+To get the database set up manually
+- Required NuGet packages: https://learn.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro?view=aspnetcore-7.0#ef-core-nuget-packages
+- Create Database context class by creating a class
+that inherits from DbContext. Docs here
+https://learn.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro?view=aspnetcore-7.0#create-the-database-context
+
