@@ -22,7 +22,11 @@ namespace CRUDExample.Controllers
         // GET: Phones
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Phone.ToListAsync());
+            // Get all phones from the database using the DB context
+            List<Phone> allPhones = await _context.Phone.ToListAsync();
+
+            // Pass the list of phones to the view
+            return View(allPhones);
         }
 
         // GET: Phones/Details/5
